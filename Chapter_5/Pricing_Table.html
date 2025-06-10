@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💼 B. Advanced CSS Grid Project – Responsive Pricing Table</title>
+    <style>
+        .pricing-table {
+            display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           gap: 20px;
+            padding: 40px;
+            max-width: 1000px;
+             margin: auto;
+        }
+        .plan{
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            transition: transform 0.3s ease;
+        }
+        .plan:hover {
+            transform: scale(1.05);
+        }
+        .plan h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2f3542;
+        }
+
+        .plan p {
+            color: #57606f;
+            margin-bottom: 20px;
+        }
+         .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #3742fa;
+        }
+
+        .btn {
+            background: #3742fa;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #2f3542;
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-table">
+        <div class="plan">
+            <h2>Basic</h2>
+            <p>Perfect for beginners.</p>
+            <div class="price">$9/mo</div>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+        <div class="plan">
+            <h2>Pro</h2>
+            <p>For professionals and developers.</p>
+            <div class="price">$29/mo</div>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+        <div class="plan">
+            <h2>Enterprise</h2>
+            <p>Custom solution for businesses.</p>
+            <div class="price">$99/mo</div>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+    </div>
+</body>
+</html>
