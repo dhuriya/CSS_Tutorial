@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📘 Chapter 4: Positioning & Flexbox</title>
+    <style>
+      .relative-box {
+        position: relative;
+        top: 10px;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        background-color: aquamarine;
+        text-align: center;
+        border-radius: 8px;
+      }
+      .parent {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            margin: 20px;
+            background-color: rgb(90, 249, 162);
+        }
+        .child {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 0px;
+            right: 0;
+            text-align: center;
+            background-color: rgb(135, 165, 39);
+            z-index: 9999;
+            }
+    </style>
+  </head>
+  <body>
+    <div class="relative-box">Relative</div>
+    <div class="parent">
+      <div class="child">Absolute</div>
+    </div>
+  </body>
+</html>

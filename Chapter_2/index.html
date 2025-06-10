@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Selectors & Combinators</title>
+    <style>
+        .answer{
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        input:checked + label + .answer{
+            display: block;
+        }
+        input::placeholder {
+        color: #999;
+        }
+        input:focus {
+        border-color: dodgerblue;
+        outline: none;
+        }
+        .menu ul {
+        display: none;
+        position: absolute;
+        }
+        .menu li:hover > ul {
+        display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>🔶 Project 1: FAQ Accordion (No JavaScript)</h2>
+        <div class="faq">
+            <div class="item">
+                <input type="checkbox"  id="q1">
+                <label for="q1">What is Css?</label>
+                <div class="answer">CSS stands for Cascading Style Sheets.</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Project 2: Custom Styled Form</h2>
+    </div>
+    <div>
+        <h2>🔸 Project 3: Multi-Level Dropdown Menu</h2>
+        <ul class="menu">
+        <li>Home</li>
+        <li>Services
+            <ul>
+            <li>Web Design</li>
+            <li>SEO</li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+</body>
+</html>

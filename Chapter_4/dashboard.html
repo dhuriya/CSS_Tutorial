@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            height: 100vh;
+            display: flex;
+        }
+        .sidebar{
+            background-color: #2f3542;
+            color: #fff;
+            width: 250px;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+        .sidebar h2{
+            margin-bottom: 20px;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .sidebar li {
+            margin: 15px 0;
+        }
+        .main{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+             background-color: #57606f;
+             color: white;
+              padding: 20px;
+              text-align: center;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+         .cards {
+            display: flex;
+            gap: 20px;
+             flex-wrap: wrap;
+             justify-content: space-between;
+         }
+         .card {
+             background: #b6f7f6;
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 20px);
+             min-width: 250px;
+             border-radius: 8px;
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+         .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            }
+         .card h3 {
+            margin-bottom: 10px;
+            color: #2f3542;
+        }
+         .card p {
+            color: #57606f;
+        }
+        .sidebar-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: white;
+            background-color: #2f3542;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+        }
+         /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar-toggle{
+                display: block;
+            }
+            .sidebar{
+                transition: transform 0.3s ease;
+                transform: translateX(-100%);
+                position: absolute;
+                height: 100%;
+                z-index: 999;
+            }
+            #toggle:checked + .sidebar-toggle + .sidebar {
+                transform: translateX(0);
+            }
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Flexbox Dashboard</title>
+</head>
+<body>
+     <input type="checkbox" id="toggle" hidden />
+     <label for="toggle" class="sidebar-toggle">☰</label>
+
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+         <ul>
+            <li>🏠 Home</li>
+            <li>📈 Analytics</li>
+            <li>⚙ Settings</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="header">
+            <h1>Welcome Admin</h1>
+        </div>
+        <div class="content">
+            <h2>Overview</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Users</h3>
+                    <p>1,230 Active</p>
+                </div>
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <p>$9,812 this month</p>
+                </div>
+                <div class="card">
+                    <h3>Conversions</h3>
+                    <p>5.3% rate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

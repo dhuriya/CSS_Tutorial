@@ -1,0 +1,23 @@
+🔸 Types of Selectors:
+Element selector (p, h1, div)
+Class selector (.class-name)
+ID selector (#id-name)
+
+🔹 3. Display Property
+inline: sits within line (span, a)
+inline-block: like inline but allows height/width
+
+🔹 4. Visibility & Z-Index
+visibility: hidden;  /* Hides but keeps space */
+display: none;       /* Hides and removes from flow */
+
+
+🔹 1. CSS position Property
+The position property defines how an element is placed in the document.
+
+Value	Description
+static	Default. Normal document flow.
+relative	Shift from its normal spot using top, left, etc.
+absolute	Positioned relative to the nearest positioned ancestor (not static).
+fixed	Stays fixed in place even on scroll (relative to viewport).
+sticky	Scrolls with page until it hits a threshold, then sticks in place.
